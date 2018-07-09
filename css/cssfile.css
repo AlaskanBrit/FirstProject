@@ -1,9 +1,24 @@
 body {
-	background-color: silver;
+	width: 400px;
+	background-color: #FFEFD5;
 	color: white;
 	font-family:Arial, Veranda, sans-serif;}
 
-h1, h2 {
-	color: #ee3e80;}
+h1{
+	background-color: #CD853F;
+	color: #191970;}
+
+h2 {
+	background-color: Khaki;
+	color: #191970;}
+
 p {
 	color: #665544}
+
+form {
+	text-align: center;
+	width: 165px;
+	background-color: Darkslategrey;
+	padding: 10px;
+	border: 5px solid black;
+	border-radius: 10px}
