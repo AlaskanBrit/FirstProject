@@ -5,31 +5,66 @@
 	</title>
 	<link href="css/cssfile.css" type="text/css" rel="stylesheet" />
 	<body>
-	<h1>This is a test page to manipulate two numbers</h1>
-	<h2>Select two numbers to add/subtract/divide </h2>
+	
+	<div class="navbar">
+	  <a href="#home">Home</a>
+	  <a href="#news">News</a>
+	  <div class="dropdown">
+	    <button class="dropbtn">Dropdown 
+	      <i class="fa fa-caret-down"></i>
+	    </button>
+	    <div class="dropdown-content">
+	      <a href="#">Placeholder A</a>
+	      <a href="#">Placeholder B</a>
+	      <a href="#">Placeholder C</a>
+	    </div>
+	  </div> 
+	</div>
+
+	<h1>Running Pace Calculator</h1>
+	<h2>Enter your target times </h2>
 	
 	<script src="js/scriptprint.js"></script>
 	<p></p>
 
 	<form>
-	First Number:<br>
-	<input type="number" id="firstnumber"><br>
-	Second Number:<br>
-	<input type="number" id = "secondnumber"><br><br>
-	<!input type="submit" value="Submit" onclick="addition()">
+	Units for Pace <br>
+	<input type="radio" name="units" id="km" value="km" checked='checked'>KM<br>
+	<input type="radio" name="units" id="miles" value="miles">Miles<br>
+	Target Time (minutes):<br>
+	<input type = "number" id="targettime"><br>
+	Race Distance (m)
+	<select name="distance" id="distanceID">
+		<option value = "400">400m</option>
+		<option value = "800">800m</option>
+		<option value = "1500">1500m</option>
+		<option value = "3000">3000m</option>
+		<option value = "5000">5000m</option>
+		<option value = "10000">10km</option>
+		<option value = "13100">1/2 Marathon</option>
+		<option value = "26200">Marathon</option>
+	</select><br>
+
 	<input type="reset"><br>
 
 
 	</form>
+
+	<button onclick="pacecalculate()">Calculate Pace</button>
+
+	<p id="pace text"></p>
+	<p id="pace value"></p>
+	<p id="testtext"></p>
+
+	<p></p>
 	
 	
 	<p></p>
 
-	<button onclick="addition()">ADD!</button>
-	<button onclick="multiply()">Multiply!</button>
-	<button onclick="divide()">Divide!</button>
-	
-	<p id="demo"></p>
-	
+	<p></p>
+
+
+
+
 	</body>
 </html>
