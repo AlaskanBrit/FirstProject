@@ -1,5 +1,11 @@
+.header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
 body {
-	width: 400px;
+	//width: 400px;
 	background-color: gainsboro;
 	color: darkslategrey;
 	font-family:Arial, Veranda, sans-serif;}
@@ -37,6 +43,16 @@ form {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+.navbar a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover{
+        background-color: #ddd;
+    color: black;
 }
 
 .dropdown {
@@ -79,4 +95,15 @@ form {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+input[type=button],input[type=reset],button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 6px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
 }
