@@ -7,9 +7,12 @@
 	<head>
 	
 	<div class="header">
-  		<h1>Pace Aid</h1>
+  		<img src="images/stopwatch.svg" alt="stopwatch" style="width:60px;height=60px;">
+		<h1>Pace Aid</h1>
 	</div>
 
+	
+	
 	</head>
 	<body>
 	
@@ -29,8 +32,11 @@
 	</div>
 
 	<h1>Running Pace Calculator</h1>
-	<h2>Enter your target times </h2>
+
 	
+	<div class="row">
+	<div class="column">
+	<h2>Enter your target times </h2>
 	<script src="js/scriptprint.js"></script>
 	<p></p>
 
@@ -41,7 +47,7 @@
 	<p></p>
 	Target Time (minutes):<br>
 	
-	<input type="time" id="targettime2" step="1"><br>
+	<input type="time" id="targettime2" step="1" value="00:00:00"><br>
 	
 	<p></p>
 	Race Distance (m)
@@ -64,7 +70,10 @@
 
 	<p></p>
 	
-	<button onclick="pacecalculate()">Calculate Poo Pace</button>
+	</div>
+	<div class="column">
+	<h2>Results</h2>
+	<button onclick="pacecalculate()">Calculate Pace</button>
 
 	<p id="pace text"></p>
 	<p id="pace value"></p>
@@ -72,12 +81,22 @@
 
 	<p></p>
 	
+	<button onclick="showsplits()">Show Splits</button>
 	
 	<p></p>
 
+	<h2>Table of Splits</h2>
+	<table id="splitstable">
+		<tr>
+			<th>Split</th>
+			<th>Time(mm:ss)</th>
+		</tr>
+	</table>
+		
 	<p></p>
 
 
-
+	</div>
+	</div>
 	</body>
 </html>

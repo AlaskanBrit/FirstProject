@@ -7,6 +7,9 @@ document.write(writtentext);
 
 function pacecalculate(){
 	var targettime = returntime();
+	var timestring;
+	
+	if(targettime!=0){
 	//document.getElementById("testtext").innerHTML = targettime;
 	//var targettime = document.getElementById("targettime").value;
 	//var racedistance = document.getElementById("racedistance").value;
@@ -37,7 +40,12 @@ function pacecalculate(){
 	if(seconds < 10){
 	seconds = `0${seconds}`;
 	}
-	var timestring = `${mins}:${seconds}`;
+	
+	timestring = `${mins}:${seconds}`;
+	}
+	else{
+	timestring = 'Please enter a valid time';
+	}
 	document.getElementById("pace value").innerHTML = timestring;
 }
 
@@ -68,4 +76,23 @@ function returntime(){
 	var totalseconds = 3600*Number(gethours) + 60*Number(getmins) + 1*Number(getsecs);
 	//document.getElementById("testtext").innerHTML = timearray.length;
 	return totalseconds;
+}
+
+function showsplits(){
+	var numofsplits = 5;
+	var row;
+	var cell1;
+	var cell2;
+	var x = document.getElementById("splitstable");
+	
+	
+	var i;
+	for (i=0; i<numofsplits; i++){
+	row = x.insertRow(i+1);
+	cell1 = row.insertCell(0);
+	cell2 = row.insertCell(1);
+	cell1.innerHTML = i;
+	cell2.innerHTML = "Test";
+	}
+
 }
